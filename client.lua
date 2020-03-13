@@ -61,7 +61,7 @@ Citizen.CreateThread(function()
 
 			local pedmodel = GetEntityModel(peds[i])
 
-			if GetPedType(pedmodel) == 28 then 
+			if GetPedType(pedmodel) ~= 28 then 
 				SetBlockingOfNonTemporaryEvents(peds[i], true)	
 				SetPedFleeAttributes(peds[i], 0, false)
 				SetPedCombatAbility(peds[i], 17, true)
