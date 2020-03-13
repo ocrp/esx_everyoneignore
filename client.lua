@@ -61,19 +61,7 @@ Citizen.CreateThread(function()
 
 			local pedmodel = GetEntityModel(peds[i])
 
-			if pedmodel ~= `a_c_deer` and 
-					pedmodel ~= `a_c_mtlion` and 
-					pedmodel ~= `a_c_coyote` and 
-					pedmodel ~= `a_c_boar` and 
-					pedmodel ~= `a_c_coyote` and 
-					pedmodel ~= `a_c_hen` and 
-					pedmodel ~= `a_c_dolphin` and 
-					pedmodel ~= `a_c_humpback` and 
-					pedmodel ~= `a_c_killerwhale` and 
-					pedmodel ~= `a_c_rat` and 
-					pedmodel ~= `a_c_rabbit_01` and 
-					pedmodel ~= `a_c_sharktiger` and 
-					pedmodel ~= `a_c_sharkhammer` then 
+			if GetPedType(pedmodel) == 28 then 
 				SetBlockingOfNonTemporaryEvents(peds[i], true)	
 				SetPedFleeAttributes(peds[i], 0, false)
 				SetPedCombatAbility(peds[i], 17, true)
